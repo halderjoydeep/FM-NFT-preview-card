@@ -1,0 +1,189 @@
+/* Resetting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+img,
+picture {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  color: white;
+  background-color: var(--very-dark-blue);
+}
+
+/* Colors */
+:root {
+  --very-dark-blue: hsl(217, 54%, 11%);
+  --dark-blue: hsl(216, 50%, 16%);
+  --line-blue: hsl(215, 32%, 27%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --light-cyan: hsla(178, 100%, 50%, 0.5);
+}
+
+/* Typography */
+body {
+  font: 15px "Outfit", sans-serif;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.desc {
+  line-height: 1.5;
+}
+
+.price {
+  font-weight: 400;
+}
+
+/* Utility Class */
+.container {
+  max-width: 300px;
+  margin: 1rem;
+}
+
+/* Layouting */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: var(--dark-blue);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  animation: 1s ease-out zoomIn;
+}
+
+/* Image section */
+.image-wrapper {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-cyan);
+  opacity: 0;
+}
+
+.nft-image,
+.overlay {
+  border-radius: 10px;
+}
+
+.overlay img {
+  width: 40px;
+}
+
+/* Content section */
+
+.content,
+.specs,
+.creator,
+.price,
+.duration {
+  display: flex;
+}
+
+.content {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.specs,
+.price,
+.duration {
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.price img {
+  width: 10px;
+}
+
+.duration img {
+  width: 15px;
+}
+
+.desc {
+  color: var(--soft-blue);
+}
+
+.price {
+  color: var(--cyan);
+}
+
+.duration {
+  color: var(--soft-blue);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line-blue);
+}
+
+.creator {
+  align-items: center;
+  gap: 10px;
+  color: var(--soft-blue);
+}
+
+.creator > img {
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.creator-name {
+  color: white;
+}
+
+/* Hover */
+@media (hover: hover) {
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .image-wrapper:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .title:hover,
+  .creator-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+  }
+}
+
+/* Animation */
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
