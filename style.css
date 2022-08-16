@@ -34,7 +34,7 @@ body {
 
 /* Typography */
 body {
-  font: 15px "Outfit", sans-serif;
+  font: 0.938rem "Outfit", sans-serif;
   font-weight: 300;
 }
 
@@ -52,7 +52,7 @@ body {
 
 /* Utility Class */
 .container {
-  max-width: 300px;
+  max-width: 18.75rem;
   margin: 1rem;
 }
 
@@ -63,9 +63,9 @@ body {
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
-  border-radius: 15px;
+  border-radius: 0.938rem;
   background-color: var(--dark-blue);
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.313rem 0.313rem 0.938rem 0.313rem rgba(0, 0, 0, 0.1);
   animation: 1s ease-out zoomIn;
 }
 
@@ -88,11 +88,11 @@ body {
 
 .nft-image,
 .overlay {
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .overlay img {
-  width: 40px;
+  width: 2.5rem;
 }
 
 /* Content section */
@@ -115,15 +115,15 @@ body {
 .duration {
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .price img {
-  width: 10px;
+  width: 0.625rem;
 }
 
 .duration img {
-  width: 15px;
+  width: 0.938rem;
 }
 
 .desc {
@@ -140,18 +140,18 @@ body {
 
 hr {
   border: none;
-  border-top: 1px solid var(--line-blue);
+  border-top: 0.063rem solid var(--line-blue);
 }
 
 .creator {
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   color: var(--soft-blue);
 }
 
 .creator > img {
-  width: 30px;
-  border: 1px solid white;
+  width: 1.875rem;
+  border: 0.063rem solid white;
   border-radius: 50%;
 }
 
